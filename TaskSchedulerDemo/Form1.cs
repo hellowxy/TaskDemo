@@ -39,7 +39,7 @@ namespace TaskSchedulerDemo
                 //dispatching an operation in the queue of the UI thread and the UI thread waits for this
                 //operation to complete, but as it waits, it cannot run the operation. never use the synchronous
                 //operations on task scheduled to the UI thread.
-                //var result = TaskMethod(TaskScheduler.FromCurrentSynchronizationContext());
+                //var result = TaskMethod(TaskScheduler.FromCurrentSynchronizationContext()).Result;
                 var result = TaskMethod().Result;
             }
             catch (Exception ex)
