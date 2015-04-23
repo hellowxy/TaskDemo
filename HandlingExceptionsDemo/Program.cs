@@ -5,8 +5,11 @@
  * email：wangxiaoying_op@163.com
  * create time：2015/4/12 14:04:01
  * description：
- * 
- * 
+ * As tasks may be connected in a very different manner, the resulting AggregateException exception might
+ * contain other aggregate exceptions inside along with the usual exceptions. Those inner aggregate exceptions
+ * might themselves contain other aggregate exceptions within them. To get rid of those wrappers, we should use
+ * the root aggregate exception's Flatten method. It will return a collection of all the inner exceptions of
+ * every child aggregate exception in the hierarchy. 
  * **********************************************************************/
 using System;
 using System.Collections.Generic;
